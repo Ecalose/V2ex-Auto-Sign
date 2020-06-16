@@ -152,17 +152,17 @@ function qmsg(msg) {
 
         try {
 
-            let url = `${qmsgapi}?msg=${encodeURI(msg)}`
+            let url = `${qmsgapi}.send?text=${encodeURI(msg)}`
 
             let res = await axios.get(url)
 
             if (res.data.code == 0) {
 
-                console.log('Qmsg酱：发送成功')
+                console.log('server酱：发送成功')
 
             } else {
 
-                console.log('Qmsg酱：发送失败!' + res.data.reason)
+                console.log('server酱：发送失败!' + res.data.reason)
 
             }
 
